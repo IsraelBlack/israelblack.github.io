@@ -4,40 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+ integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+ <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <title>Israel's Blog</title>
 </head>
+
 <body>
   <!--Nav-Bar-->
-  <div class="nav-container">
-
-    <div class="nav-menu">
-
-      <button class="btn-small" id="logo-btn">I</button> <!--Consider just a logo, no btn-->
-      <h2 id="pge-header">Israel's Blog</h2>
-      <a class="nav-btn" id="home-btn"></a>
-      <a class="nav-btn" id="about-btn"></a>
-
-      <div class="mbl-top"> <!--Top section for the mobile menu-->
-        <button class="btn-small" id="wffle-btn"></button>
-        <button class="btn-small" id="exit-button">X</button>
-        <ul class="blog-menu-mbl">
-          <li class="blog-item"><a href="blog/te-houtaewa-template.html"> Reflections 1</a></li>
-          <li class="blog-item"><a href="#"> Reflections 2</a></li>
-          <li class="blog-item"><a href="#"> Reflections 3</a></li>
-          <li class="blog-item"><a href="#"> Reflections 4</a></li>
-        </ul>
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="#">Israel's Blog</a></div>
+      <ul class="links">
+        <li><a href="hero">Home</a></li>
+        <li><a href="#">About</a></li> <!--Leads to about page-->
+      </ul>
+      
+      <div class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
-
+      
     </div>
 
+    <div class="dropdown-menu">
+      <li><a href="hero">Home</a></li>
+        <li><a href="#">About</a></li> <!--Leads to about page-->
+        <li><a href="blog/te-houtaewa-template.html">Blog 1</a></li>
+        <li><a href="blog/te-houtaewa-template.html">Blog 2</a></li>
+        <li><a href="blog/te-houtaewa-template.html">Blog 3</a></li>
     </div>
 
-  </div>
+  </header>
 
+  
   <div class="body-container">
-    <img class="top-img">
     <div class="header" id="home-hdr">
-      <h1>Welcome to my blog</h1>
+      <h1 id="welcome">Welcome to my blog</h1>
+
     </div>
     <div class="body-paragraph" id="about">
       <h3>About this blog</h3>
@@ -65,6 +70,19 @@
         <a class="btn-med">See more...</a> <!--Visible on mobile, activates moblie blog overlay-->
     </div>
   </div>
+<script>
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const toggleBtnIcon = document.querySelector('.toggle-btn i');
+  const dropDownMenu = document.querySelector('.dropdown-menu');
 
+  toggleBtn.onclick = function (){
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
+
+    toggleBtnIcon.classList = isOpen
+    ? 'fa-solid fa-xmark'
+    : 'fa-solid fa-bars'
+  }
+</script>
 </body>
 </html>
