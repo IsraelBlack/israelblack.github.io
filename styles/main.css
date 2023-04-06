@@ -65,46 +65,124 @@ position: relative;
   display: none;
   padding-right: 5px;
  }
+ 
 
- /*Header*/
+/*About blog*/
 
-.header {
-  
+.body-container {
+  position: absolute;
+  top: 30px;
+  margin: 0;
 }
 
- 
-#welcome {
+
+.subtitle {
+  position: relative;
   text-align: center;
+  font-size: 40px;
+  margin-bottom: 7%;
+  top: 20px;
+}
+
+.bckgrnd-img-cont {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .body-paragraph {
-  background-image: url("/home/israel/devacademy/israelblack.github.io/images/background.png");
+  border: black solid 1mm;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #6eaff6;
+}
+
+.body-paragraph h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.about-text {
+  font-size: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/*Blog body*/
+
+.blog-background {
+  position: absolute;
+  background-color: #06518b;
+  width: 100%;
+}
+
+.blog-content {
+  border: black solid 1mm;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #92c8f7;
+  margin-bottom: 5%;
+}
+
+.sect-head {
+  text-align: center;
+  font-size: 2em;
+}
+
+.blog-item {
+  border: black solid 2px;
+  width: 30%;
+  height: auto;
+  padding: 2%;
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+  display: inline-block;
+}
+
+.blog-item a {
+  font-size: 30px;
+}
+
+.blog-item a:hover {
+  background-color: black;
 }
 
 /*Dropdown*/
 .dropdown-menu {
-
+border: black solid 1px;
   position: absolute;
   right: 1rem;
   top: 60px;
   height: 0;
   width: 100%;
-  background: rgb(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background: #06518b;
+  opacity: 6;
+  z-index: 1;
   backdrop-filter: blur(15px);
-  border-radius: 10px;
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #06518b;
 }
 
 .dropdown-menu.open {
-  height: 240px;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  left: 0%;
 }
 
+.dropdown-menu.open a{
+  font-size: 1.5em;
+  padding: 5% 40%;
+}
 .dropdown-menu li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
  /*Responsive Design*/
@@ -121,11 +199,26 @@ position: relative;
   .dropdown-menu{
     display: block;
   }
+  .bckgrnd-img-cont {
+    background-image: none;
+  }
+
  }
 
  @media (max-width: 576px) {
   .dropdown-menu {
     left: 2rem;
     width: unset;
+  }
+
+  .blog-item {
+    width: 50%;
+    margin-right: 20%;
+    margin-left: 15%;
+    text-align: center;
+  }
+
+  .blog-item a{
+    font-size: 25px;
   }
  }

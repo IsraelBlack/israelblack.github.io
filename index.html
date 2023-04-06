@@ -13,12 +13,14 @@
 </head>
 
 <body>
+
   <!--Nav-Bar-->
   <header>
     <div class="navbar">
       <div class="logo"><a href="#">Israel's Blog</a></div>
       <ul class="links">
         <li><a href="hero">Home</a></li>
+        <div id="seperator"></div>
         <li><a href="#">About</a></li> <!--Leads to about page-->
       </ul>
       
@@ -29,47 +31,57 @@
     </div>
 
     <div class="dropdown-menu">
-      <li><a href="hero">Home</a></li>
+      <li id="home"><a href="hero">Home</a></li>
         <li><a href="#">About</a></li> <!--Leads to about page-->
-        <li><a href="blog/te-houtaewa-template.html">Blog 1</a></li>
-        <li><a href="blog/te-houtaewa-template.html">Blog 2</a></li>
-        <li><a href="blog/te-houtaewa-template.html">Blog 3</a></li>
     </div>
 
   </header>
 
-  
   <div class="body-container">
-    <div class="header" id="home-hdr">
-      <h1 id="welcome">Welcome to my blog</h1>
-
+    <div class ="bckgrnd-img-cont">
+      <div class="header" id="home-hdr">
+        <h1 id="welcome" class="subtitle">Welcome to my blog</h1>
+  
+      </div>
+      <div class="body-paragraph" id="about">
+        <h3>About this blog</h3>
+        <p class="about-text">Hi! My name is Israel and this blog is a place where I can reflect on my journey here at Devacademy.  
+          I'll be using this blog to reflect on my learning journey here to help me discover my learning style so that I may better 
+          proceed with my life here while I'm studying</p>
+          <p class="about-text">On this page, you will find links to each of the blog posts I have made and below that, the first blog post so that 
+            you can see what it's all about. I also have an about page so that you can better understand who I am as a person with a little bit about my background
+          </p>
+      </div>
     </div>
-    <div class="body-paragraph" id="about">
-      <h3>About this blog</h3>
-      <p id="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante nisl,  
-        tincidunt a turpis id, efficitur mattis nisl. Maecenas eget leo ut neque 
-        blandit dignissim. Phasellus eu pharetra magna. Fusce vitae urna lacus. 
-        Suspendisse potenti. Quisque orci arcu, pellentesque in libero et.</p>
-    </div>
-    <div class="select-blog">
-      <ul>
-        <li class="blog-item"><a href="blog/te-houtaewa-template.html"> Reflections 1</a></li>
-        <li class="blog-item"><a href="#"> Reflections 2</a></li>
-        <li class="blog-item"><a href="#"> Reflections 3</a></li>
-        <li class="blog-item"><a href="#"> Reflections 4</a></li>
+      <div class="blog-background">
+        <div class="blog-content">
+          <div class="sprint-title">
+            <h3 class="sect-head">Tech</h3>
+            <ul>
+              <li class="blog-item"><a href="blog/te-houtaewa-template.html">te-houtaewa</a></li>
+            </ul>
+          </div>
     
-      </ul>
+          <div class="sprint-title"> 
+            <h3 class="sect-head">Core</h3>
+            <ul>
+              <li class="blog-item"><a href="#"> Reflections 2</a></li>
+              <li class="blog-item"><a href="#"> Reflections 3</a></li>
+              <li class="blog-item"><a href="#"> Reflections 4</a></li>
+            </ul>
+          </div>
+          
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
 
-    </div>
-    <div class="blog" >
-      <h4 class="blog-header">Reflection 1</h4>
-      <p class="blog-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam commodo orci 
-        id malesuada pellentesque. Morbi egestas, augue non feugiat facilisis, ipsum nibh fringilla diam, 
-        at viverra ligula lorem fermentum sem. Nunc nec dictum risus. Nunc eu porttitor turpis, tincidunt 
-        dapibus felis. Suspendisse ultrices ut enim nec interdum. </p>
-        <a class="btn-med">See more...</a> <!--Visible on mobile, activates moblie blog overlay-->
+      </div>
     </div>
   </div>
+
 <script>
   const toggleBtn = document.querySelector('.toggle-btn');
   const toggleBtnIcon = document.querySelector('.toggle-btn i');
