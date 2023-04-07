@@ -102,8 +102,8 @@ position: relative;
   font-size: 2rem;
 }
 
-.about-text {
-  font-size: 25px;
+.blog-text {
+  font-size: 20px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -222,3 +222,16 @@ border: black solid 1px;
     font-size: 25px;
   }
  }
+
+ /*Blog styling*/
+#pos-cont {
+  position: relative;
+  text-align: center;
+}
+
+#pos-para h4{
+  top: 50%;
+  margin-bottom: 3%;
+  font-size: 25px;
+}
+
