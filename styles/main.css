@@ -214,6 +214,9 @@ border: black solid 1px;
   font-size: 20px;
 }
 
+.show-li {
+  text-align: left;
+}
  /*Responsive Design*/
  @media(max-width: 992px){
   .navbar .links,
